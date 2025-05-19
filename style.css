@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+    --primary-blue: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+    --blue-main-bg: hsl(217, 54%, 11%);
+    --blue-card-bg: hsl(216, 50%, 16%);
+    --blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: var(--blue-main-bg);
+    color: white;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--primary-cyan);
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    margin: 100px auto;
+    background-color: var(--blue-card-bg);
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 16px 8px 0 rgba(0, 0, 0, 0.2),
+        0 24px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    display: block;
+    width: 264px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.container {
+    position: relative;
+}
+
+.container .overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    background-color: hsla(178, 100%, 50%, 0.55);
+}
+
+.container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.container .overlay img {
+    width: 50px;
+    position: absolute;
+    transform: translateY(10px);
+}
+
+.card h1 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.card h1:hover {
+    color: var(--primary-cyan);
+    cursor: pointer;
+}
+
+.card p {
+    font-size: 15px;
+    color: var(--primary-blue);
+    font-weight: 300;
+}
+
+.stats {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats .eth {
+    display: flex;
+    gap: 5px;
+}
+
+.stats .eth p {
+    color: var(--primary-cyan);
+    font-weight: bold;
+    transform: translateY(-2px);
+}
+
+.stats .time {
+    display: flex;
+    gap: 10px;
+    transform: translateY(-1px);
+}
+
+.stats .time p {
+    transform: translateY(-2px);
+}
+
+.stats img {
+    width: 10px;
+}
+
+.stats .time img {
+    width: 15px;
+}
+
+hr {
+    color: var(--blue-line);
+}
+
+.lesser-footer {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.lesser-footer img {
+    width: 30px;
+    border: 1px white solid;
+    border-radius: 100%;
+}
+
+.lesser-footer p {
+    align-self: start;
+    transform: translateY(4px);
+}
+
+.main-footer {
+    text-align: center;
+}
